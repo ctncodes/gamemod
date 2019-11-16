@@ -3,102 +3,45 @@
 <html>
 
 <head>
-  <script>
-    function insert(num) {
-      document.form.textview.value = document.form.textview.value + num
-    }
+    <script src="p5.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="seriously.js"></script>
+    <script src="effects/seriously.blur.js"></script>
+    <script src="effects/seriously.chroma.js"></script>
+    <script src="https://www.auduno.com/clmtrackr/build/clmtrackr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="sketch2.js"></script>
+    <meta charset="utf-8">
+    <style>
+    /* body {
+      background-color: #F0C;
+    } */
+    </style>
+  </head>
 
-    function equal() {
-      let exp = document.form.textview.value;
-      if (exp) {
-        document.form.textview.value = eval(exp)
-      }
-    }
+  <body>
 
-    function clear() {
-      document.form.textview.value = "";
-    }
 
-    function back() {
-      let exp = document.form.textview.value;
-      document.form.textview.value = exp.substring(0,exp.length-1);
-    }
-  </script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
+    <div class="content">
+      <div class="" id="unpredictable"></div>
+      <!-- <button type="button" name="button" id="whatsTheMagicWord">Abracadabra!</button> -->
+      <!-- <button type="button" name="button" id="slowMo" class="waltDisneyPictures">Add Delay</button> -->
+      <!-- <button type="button" name="button" id="downBeat" class="pixarAnimationStudios">Add Reverb</button> -->
+      <!-- <button type="button" name="button" id="aFullLengthFeatureFilm" class="aDisneyPixarFilm">Toy Story</button> -->
+      <!-- <button type="button" name="button" id="stopAndGo" class="aDisneyPixarFilm">Play/Pause</button> -->
+      <!-- <button type="button" name="button" id="aFullLengthFeatureFilm" class="aDisneyPixarFilm">Bass 1</button> -->
+      <!-- <button type="button" name="button" id="aFullLengthFeatureFilm" class="aDisneyPixarFilm">Bass 2</button> -->
+      <!-- <button type="button" name="button" id="aFullLengthFeatureFilm" class="aDisneyPixarFilm">Treble ft. Bass</button> -->
+      <!-- <button type="button" name="button" id="aFullLengthFeatureFilm" class="aDisneyPixarFilm">Treble & Bass</button> -->
+      <!-- <button type="button" name="button" id="aFullLengthFeatureFilm" class="aDisneyPixarFilm">Tippy</button> -->
+      <!-- <img src="assets/Kingdom_Hearts_III_84.jpg" alt="Toy Box" id="toyStory" width="800px" style="display: none;"> -->
+      <!-- <img src="assets/Francesco Bernoulli.jpg" alt="Magician" id="Magician" width="800px" style="display: none;"> -->
+      <!-- <img src="assets/Francesco Bernoulli.jpg" alt="Magician" id="Magician" width="800px" style="display: none;"> -->
+      <!-- <img src="assets/Francesco Bernoulli.jpg" alt="Magician" id="Magician" width="800px" style="display: none;"> -->
+      <!-- <img src="assets/Francesco Bernoulli.jpg" alt="Magician" id="Magician" width="800px" style="display: none;"> -->
+    </div>
 
-    .button {
-      width: 50;
-      height: 50;
-      font-size: 25;
-      margin: 2;
-      cursor: pointer;
-      background: #607d8b;
-      border: none;
-      color: white;
-    }
+  </body>
 
-    .textview {
-      width: 217;
-      margin: 5;
-      font-size: 25;
-      padding: 5;
-      border: none;
-      color: #607d8b;
-    }
-    .main{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-    }
-    .bg{
-      background: linear-gradient(to right, #e91e63, #3f51b5);
-      height: 100%;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="bg"></div>
-  <div class="main">
-    <form name="form">
-      <input class="textview" name="textview">
-    </form>
-    <table>
-      <tr>
-        <td><input class="button" type="button" value="C" onclick="clear()"></td>
-        <td><input class="button" type="button" value="<" onclick="back()"></td>
-        <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
-        <td><input class="button" type="button" value="x" onclick="insert('*')"></td>
-      </tr>
-      <tr>
-        <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
-        <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
-        <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
-        <td><input class="button" type="button" value="-" onclick="insert('-')"></td>
-      </tr>
-      <tr>
-        <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
-        <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
-        <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
-        <td><input class="button" type="button" value="+" onclick="insert('+')"></td>
-      </tr>
-      <tr>
-        <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
-        <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
-        <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
-        <td rowspan=5><input class="button" style="height:106" type="button" value="=" onclick="equal()"></td>
-      </tr>
-      <tr>
-        <td colspan=2><input class="button" style="width:106" type="button" value="0" onclick="insert(0)"></td>
-        <td><input class="button" type="button" value="." onclick="insert('.')"></td>
-      </tr>
-    </table>
-  </div>
-</body>
-
-</html>
+  </html>
