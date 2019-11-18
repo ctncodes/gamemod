@@ -14,7 +14,7 @@ table {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%;);
-  border: 2px solid white;
+  border: 2px solid gold;
   padding: 15px;
   border-radius: 13px;
   box-shadow: 0px 2px 10px 4px #708e3b;
@@ -22,17 +22,17 @@ table {
 input[type="text"]{
   height: 45px;
   width: 157px;
-  border: 2px solid white;
+  border: 2px solid gold;
   border-radius: 15px;
   font-size: 33px;
   background: none;
-  color: white;
+  color: gold;
 }
 input[type="button"]{
-  color: white;
+  color: gold;
   height: 50px;
   width: 50px;
-  border: 2px solid white;
+  border: 2px solid gold;
   border-radius: 15px;
   background: none;
   font-weight: bold;
