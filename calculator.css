@@ -11,36 +11,36 @@ body {
 
 table {
   position: absolute;
-  top: 40%;
+  top: 60%;
   left: 10%;
   transform: translate(-10%, -10%;);
-  border: 5px solid gold;
-  padding: 37.5px;
-  border-radius: 32.5px;
-  box-shadow: 0px 5px 25px 10px #708e3b;
+  border: 2px solid gold;
+  padding: 15px;
+  border-radius: 13px;
+  box-shadow: 0px 2px 10px 4px #708e3b;
 }
 
 input[type="text"]{
-  height: 112.5px;
-  width: 392.5px;
-  border: 5px solid gold;
-  border-radius: 37.5px;
-  font-size: 82.5px;
+  height: 45px;
+  width: 157px;
+  border: 2px solid gold;
+  border-radius: 15px;
+  font-size: 33px;
   background: none;
   color: gold;
 }
 
 input[type="button"]{
   color: gold;
-  height: 125px;
-  width: 125px;
-  border: 5px solid gold;
-  border-radius: 37.5px;
+  height: 50px;
+  width: 50px;
+  border: 2px solid gold;
+  border-radius: 15px;
   background: none;
   font-weight: bold;
 }
 
 input[type="button"]:hover{
   color: black;
-  transition: .5s;
+  transition: .2s;
 }
