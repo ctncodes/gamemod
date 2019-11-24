@@ -48,7 +48,7 @@ input[type="button"]:hover{
   transition: .2s;
 }
 
-.theGames{
+.game{
   /* position: absolute;
   top: 40%;
   left: 40%;
@@ -59,14 +59,14 @@ input[type="button"]:hover{
   border-radius: 5px;
 }
 
-.theGrid{
+.grid{
   display: grid;
   grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px;
   grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px;
   border: 1px solid #93CADD;
 }
 
-.theGrid button{
+.grid button{
   background-color: #cfcfcf;
   color: #D9352E;
   font-size: 24px;
