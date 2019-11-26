@@ -266,8 +266,8 @@ class Game {
     // Render message
     if (status === "won") {
       document.querySelector(".message").textContent = "Earth wins!";
-    } else {
-      document.querySelector(".message").textContent = "";
+    // } else {
+    //   document.querySelector(".message").textContent = "";
     }
   }
 }
