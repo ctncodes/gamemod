@@ -10,12 +10,12 @@ class Box {
   }
 
   getRightBox() {
-    if (this.x === 3) return null;
+    if (this.x === 7) return null;
     return new Box(this.x + 1, this.y);
   }
 
   getBottomBox() {
-    if (this.y === 3) return null;
+    if (this.y === 7) return null;
     return new Box(this.x, this.y + 1);
   }
 
