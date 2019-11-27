@@ -26,15 +26,15 @@ body {
   display: grid;
   grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px;
   grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px;
-  border: 1px solid #93CADD;
+  border: 1px solid #232978;
 }
 
 .grid button {
-  background-color: #cfcfcf;
+  background-color: #93CADD;
   color: #D9352E;
   font-size: 24px;
   font-weight: bold;
-  border: 2px solid #93CADD;
+  border: 2px solid #232978;
   outline: none;
   cursor: pointer;
 }
