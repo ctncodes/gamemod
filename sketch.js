@@ -268,6 +268,10 @@ class Game {
     // Render message
     if (status === "won") {
       document.querySelector(".message").textContent = "Earth wins!";
+      // fill(random(255),random(255),random(255));
+      // let level = volume.getLevel();
+      // let size = map(level, 0, 1, 0, 2000);
+      // ellipse(random(width), random(height), size, size);
     } else {
       document.querySelector(".message").textContent = "";
     }
