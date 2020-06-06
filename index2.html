@@ -5,8 +5,8 @@
 <title>Art: Paintings by Vincent van Gogh</title>
 <style>
   canvas {
-    width: 504px;
-    height: 504px;
+    width: 2016px;
+    height: 2016px;
     border: 15px #D9352E;
     margin: auto;
   }
@@ -15,18 +15,18 @@
 <body>
 
 
-<div id="top" style="width:1344px; margin: auto; margin-top:11px; text-align:center">
-<header style="width:1333px; height:112px; border-left:11px #D9352E;">
-<h1 style="font-size:78px; margin: auto; text-align:center; color: #93CADD; text-shadow: 2px 2px #D9352E; text-decoration:underline">Art: Paintings by Vincent van Gogh</h1>
+<div id="top" style="width:5376px; margin: auto; margin-top:45px; text-align:center">
+<header style="width:5331px; height:112px; border-left:45px #D9352E;">
+<h1 style="font-size:314px; margin: auto; text-align:center; color: #93CADD; text-shadow: 9px 9px #D9352E; text-decoration:underline">Art: Paintings by Vincent van Gogh</h1>
 </header>
 
-<div style="margin-top:11px; height: 1120px;">
+<div style="margin-top:45px; height: 4480px;">
 <div>
 <div style="width:50%; float:left; display:inline">
-<div style="text-align:center; height:34px">
+<div style="text-align:center; height:134px">
 <h1 id="message"></h1>
 </div>
-<div style="text-align:center; height:34px">
+<div style="text-align:center; height:134px">
 <h1 id="moves"></h1>
 
 <!-- <audio id="cheers" controls="none" preload="auto" style="display:none">
@@ -44,26 +44,265 @@
 </div>
 
 <div>
-<canvas id="canvas" height="504px" width="504px"></canvas>
+<canvas id="canvas" height="2016px" width="2016px"></canvas>
 </div>
 </div>
-<div style=" padding-top:2px; text-align:center; width:50% padding-top:11px">
-<h1 style="font-size:45px; color:#93cadd; text-decoration:underline">GUEST OF HONOR</h1>
+<div style=" padding-top:9px; text-align:center; width:50% padding-top:45px">
+<h1 style="font-size:179px; color:#93cadd; text-decoration:underline">GUEST OF HONOR</h1>
 <div style="margin: auto">
-<img src="assets/Self-Portrait by Vincent van Gogh.jpg" id="Main Artist">
-<!-- <img src="images/Self-Portrait by Vincent van Gogh.jpg" id="Main Artist"> -->
-<!-- <img src="images/Self-Portrait by Vincent van Gogh.jpg" id="Main Artist"> -->
+<img src="assets/The Kingfisher.png" id="painting1">
+<img src="assets/Three Pairs of Shoes.png" id="painting2">
+<img src="assets/Flowering Plum Tree - after Hiroshige.png" id="painting3">
+<img src="assets/The Bridge in the Rain - after Hiroshige.png" id="painting4">
 </div>
 <div>
-<!-- <img src="images/Self-Portrait by Vincent van Gogh.jpg" id="Main Artist"> -->
-<!-- <img src="images/Self-Portrait by Vincent van Gogh.jpg" id="Main Artist"> -->
-<!-- <img src="images/Self-Portrait by Vincent van Gogh.jpg" id="Main Artist"> -->
+<img src="assets/The Courtesan - after Eisen.png" id="painting5">
+<img src="assets/The Langlois Bridge at Arles with Women Washing.png" id="painting6">
+<img src="assets/Pink Peach Tree, Souvenir to Mauve.png" id="painting7">
+<img src="assets/Street in Saintes-Maries-de-la-Mer.png" id="painting8">
 </div>
-<!-- <img src="images/Self-Portrait by Vincent van Gogh.jpg" id="Main Artist"> -->
-<!-- <img src="images/Self-Portrait by Vincent van Gogh.jpg" id="Main Artist"> -->
-<!-- <img src="images/Self-Portrait by Vincent van Gogh.jpg" id="Main Artist"> -->
+<img src="assets/Still Life With Onions.png" id="painting9">
+<img src="assets/Sunflowers.png" id="painting10">
+<img src="assets/Giant Peacock Moth.png" id="painting11">
+<img src="assets/The Starry Night.png" id="painting12">
+<div>
+<img src="assets/Wheat Field with Cypresses.png" id="painting13">
+<img src="assets/Bedroom in Arles.png" id="painting14">
+<img src="assets/Olive Trees with Yellow Sky and Sun.png" id="painting15">
+<img src="assets/Still Life - Vase with Pink Roses.png" id="painting16">
+</div>
 </div>
 </div>
 </div>
 
 <script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var empty = 16;
+var moves = -1;
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+var ar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0];
+im=shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0]);
+
+for(var i = 0; i <= 16; i++) {
+  if(im[i]==0)
+    empty=i+1;
+}
+
+var restart=0;
+function won() {
+  ctx.clearRect(1512,1512,504,504);
+  var img=document.getElementById("painting16");
+  var pat=ctx.createPattern(img,"repeat");
+  ctx.fillStyle=pat;
+  ctx.fillRect(1512,1512,504,504);
+  m=document.getElementById("message");
+  m.innerHTML="You won the game in "+moves.toString() +" moves";
+  // au=document.getElementById("cheers");
+  // au.play();
+  restart=1;
+  moves=-1;
+}
+
+function draw() {
+  moves++;
+  mov=document.getElementById("moves");
+  mov.innerHTML="MOVES: "+ moves.toString();
+  m=document.getElementById("message");
+  m.innerHTML="";
+ var t;
+ t=0;
+ if(restart==1) {
+
+   im=shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0]);
+     for(var i=0;i<=15;i++) {
+       if(im[i]==0)
+           empty=i+1;
+
+
+     }
+
+     console.log(empty);
+
+    ctx.clearRect(0,0,2016,2016);
+       restart=0;
+ }
+   for(var i=0;i<16;i++) {
+     if(im[i]!==ar[i])
+         t=1;
+   }
+   console.log(im);
+   console.log(ar);
+
+   for(var i=0;i<4;i++) {
+     for(var j=0;j<4;i++) {
+             component(i,j);
+     }
+   }
+
+   console.log(t);
+
+   if(t==0) {
+       console.log("one more");
+       won();
+   }
+
+}
+
+function component(x, y) {
+
+  var text="painting";
+  z=x+4*y;
+  z=im[z];
+  text=text+z.toString();
+  if(z!=0)
+  {
+      var img=document.getElementById(text);
+      var pat=ctx.createPattern(img,"repeat");
+      ctx.fillStyle=pat;
+  }
+
+  else
+  {
+    ctx.fillStyle="black";
+  }
+
+  ctx.fillRect(504*x,504*y,504,504);
+}
+
+function moveup() {
+  ctx.clearRect(0,0,2016,2016);
+  if(restart==1)
+      {
+        draw();
+        return;
+      }
+  if(empty==16 || empty==14 || empty==15 || empty==13) {
+    //au=document.getElementById("no");
+    //au.play();
+    moves--;
+    draw();
+  }
+  else{
+    //au=document.getElementById("cut");
+    //au.play();
+    text="painting";
+    var curr=empty;
+    empty+=4;
+    var next=empty;
+    im[curr-1]=im[next-1];
+    im[next-1]=0;
+    draw();
+
+
+  }
+  console.log(empty);
+}
+
+function movedown() {
+  ctx.clearRect(0,0,2016,2016);
+  if(restart==1)
+  {
+
+  draw();
+  return;
+  }
+  if(empty==1 || empty==2 || empty==3 || empty==4) {
+    //au=document.getElementById("no");
+    //au.play();
+    moves--;
+    draw();
+  }
+  else{
+    //au=document.getElementById("cut");
+    //au.play();
+    text="painting";
+    var curr=empty;
+    empty-=4;
+    var next=empty;
+    im[curr-1]=im[next-1];
+    im[next-1]=0;
+    draw();
+
+  }
+
+  console.log(empty);
+
+}
+
+function moveleft() {
+  ctx.clearRect(0,0,2016,2016);
+
+  if(restart==1)
+  {
+
+  draw();
+  return;
+  }
+
+  if(empty==4 || empty==8 || empty==12 || empty==16) {
+    //au=document.getElementById("no");
+    //au.play();
+    moves--;
+    draw();
+  }
+  else{
+    //au=document.getElementById("cut");
+    //au.play();
+    text="painting";
+    var curr=empty;
+    empty+=1;
+    var next=empty;
+    im[curr-1]=im[next-1];
+    im[next-1]=0;
+    draw();
+
+
+  }
+  console.log(empty);
+}
+
+function moveright() {
+  ctx.clearRect(0,0,2016,2016);
+  if(restart==1)
+  {
+  moves--;
+  draw();
+  return;
+  }
+  if(empty==1 || empty==5 || empty==9 || empty==13) {
+    //au=document.getElementById("no");
+    //au.play();
+    moves--;
+    draw();
+  }
+  else{
+    //au=document.getElementById("cut");
+    //au.play();
+    text="painting";
+    var curr=empty;
+    empty-=1;
+    var next=empty;
+    im[curr-1]=im[next-1];
+    im[next-1]=0;
+    draw();
+  }console.log(empty);
+
+}
