@@ -50,12 +50,12 @@ body {
 
 .footer button {
   border: none;
-  font-size: 10px;
+  font-size: 63px;
   font-weight: bold;
   border-radius: 2.5px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   padding: 2.5px;
-  width: 40px;
+  width: 252px;
   background-color: #93CADD;
   color: #D9352E;
   outline: none;
@@ -70,7 +70,7 @@ body {
 .footer span {
   flex: 1;
   text-align: center;
-  font-size: 10px;
+  font-size: 63px;
   color: #93CADD;
   font-weight: bold;
   margin: auto 0;
