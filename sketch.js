@@ -1,3 +1,22 @@
+let art1, art2, art3, art4, art5, art6, art7, art8, art9, art10, art11, art12, art13, art14, art15, art16;
+function setup() {
+  art1 = loadImage("assets/1. The Kingfisher");
+  art2 = loadImage("assets/2. Three Pairs of Shoes.png");
+  art3 = loadImage("assets/3. Flowering Plum Tree - after Hiroshige.png");
+  art4 = loadImage("assets/4. The Bridge in the Rain - after Hiroshige.png");
+  art5 = loadImage("assets/5. The Courtesan - after Eisen.png");
+  art6 = loadImage("assets/6. The Langlois Bridge at Arles with Women Washing.png");
+  art7 = loadImage("assets/7. Pink Peach Tree, Souvenir to Mauve.png");
+  art8 = loadImage("assets/8. Street in Saintes-Maries-de-la-Mer.png");
+  art9 = loadImage("assets/9. Still Life With Onions.png");
+  art10 = loadImage("assets/10. Sunflowers.png");
+  art11 = loadImage("assets/11. Giant Peacock Moth.png");
+  art12 = loadImage("assets/12. The Starry Night.png");
+  art13 = loadImage("assets/13. Wheat Field with Cypresses.png");
+  art14 = loadImage("assets/14. Bedroom in Arles.png");
+  art15 = loadImage("assets/15. Olive Trees with Yellow Sky and Sun.png");
+  art16 = loadImage("assets/16. Still Life - Vase with Pink Roses.png");
+}
 class Box {
   constructor(x, y) {
     this.x = x;
