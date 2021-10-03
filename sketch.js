@@ -1,6 +1,6 @@
 let art1, art2, art3, art4, art5, art6, art7, art8, art9, art10, art11, art12, art13, art14, art15, art16;
 function setup() {
-  art1 = loadImage("assets/1. The Kingfisher");
+  art1 = loadImage("assets/1. The Kingfisher.png");
   art2 = loadImage("assets/2. Three Pairs of Shoes.png");
   art3 = loadImage("assets/3. Flowering Plum Tree - after Hiroshige.png");
   art4 = loadImage("assets/4. The Bridge in the Rain - after Hiroshige.png");
