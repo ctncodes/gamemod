@@ -1,5 +1,18 @@
 html {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+}
+
+canvas {
+  text-align: center;
+  display: inline-table;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  padding: 95px;
+  background-color: #D9352E;
+  border-radius: 45px;
 }
 
 body {
@@ -80,4 +93,22 @@ body {
 .message {
   color: #FFB400;
   height: 40px;
+}
+
+.annieAndTheBeanstalk {
+  color: #FFB400;
+  border-style: 12px ridge #FFE600;
+  background-color: #232978;
+  border: #FFE600;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+}
+#ludwigVanBeethoven {
+  position: absolute;
+  bottom: 0px;
 }
