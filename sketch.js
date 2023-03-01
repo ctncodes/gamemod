@@ -119,7 +119,7 @@ function findBlank() {
   }
 }
 function keyPressed() {
-  if (keyCode === BACKSPACE) {
+  if (keyCode === UP_ARROW) {
     window.location.href = "https://www.youtube.com/watch?v=BXzxZUnhQwg";
     return false;
   }
