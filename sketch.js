@@ -6,6 +6,8 @@ let missingArt;
 let missionCompletion;
 function preload() {
   archive = loadImage("assets/Black and White.png");
+  soundFormats('mp3');
+  missingArt = loadSound("assets/Symphony No.5 in C minor Op 67 Beethoven [Music Box].mp3");
 }
 
 function setup() {
@@ -79,6 +81,9 @@ function draw() {
     // missionCompletion = select("#vincentVanGogh");
     // missionCompletion.mousePressed(buttonPressed);
     // missionCompletion.parent("#ludwigVanBeethoven");
+    // missingArt.setVolume(1.0);
+    // missingArt.play();
+    addEventListener("click", keyPressed);
   }
 }
 function isSolved() {
@@ -111,5 +116,11 @@ function isNeighbor(i, j, x, y) {
 function findBlank() {
   for (let i = 0; i < artBoard.length; i++) {
     if (artBoard[i] == -1) return i;
+  }
+}
+function keyPressed() {
+  if (keyCode === BACKSPACE) {
+    window.location.href = "https://www.youtube.com/watch?v=BXzxZUnhQwg";
+    return false;
   }
 }
