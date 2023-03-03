@@ -75,15 +75,12 @@ function draw() {
   if (isSolved()) {
     strokeWeight(12);
     stroke("#232978");
-    textSize(126);
+    textSize(122);
     fill("#FFB400");
-    text("Mission Completion!", 456, 1044);
-    // missionCompletion = select("#vincentVanGogh");
-    // missionCompletion.mousePressed(buttonPressed);
-    // missionCompletion.parent("#ludwigVanBeethoven");
+    text("Mission Completion!", 456, 978);
+    text("Now you may press the Enter button!", 0, 1104);
     // missingArt.setVolume(1.0);
     // missingArt.play();
-    addEventListener("click", keyPressed);
   }
 }
 function isSolved() {
@@ -93,6 +90,10 @@ function isSolved() {
     }
   }
   background(archive);
+  if (keyCode === ENTER) {
+    window.location.href = "https://www.youtube.com/watch?v=BXzxZUnhQwg";
+    return false;
+  }
   return true;
 }
 function move(i, j, arr) {
@@ -116,11 +117,5 @@ function isNeighbor(i, j, x, y) {
 function findBlank() {
   for (let i = 0; i < artBoard.length; i++) {
     if (artBoard[i] == -1) return i;
-  }
-}
-function keyPressed() {
-  if (keyCode === UP_ARROW) {
-    window.location.href = "https://www.youtube.com/watch?v=BXzxZUnhQwg";
-    return false;
   }
 }
