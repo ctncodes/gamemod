@@ -119,3 +119,11 @@ function findBlank() {
     if (artBoard[i] == -1) return i;
   }
 }
+function keyTyped() {
+  if (key === 'b') {
+    missingArt.setVolume(0.375);
+    missingArt.loop();
+  } else if (key === '2') {
+    missingArt.stop();
+  }
+}
