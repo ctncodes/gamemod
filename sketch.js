@@ -7,7 +7,7 @@ let missionCompletion;
 function preload() {
   archive = loadImage("assets/Paintings by Vincent van Gogh.png");
   soundFormats('mp3');
-  missingArt = loadSound("assets/Symphony No.5 in C minor Op 67 Beethoven [Music Box].mp3");
+  missingArt = loadSound("assets/Music by Ludwig van Beethoven.mp3");
 }
 
 function setup() {
